@@ -126,3 +126,27 @@ input:hover {
   background-color: #fae0df;
   color: black;
 }
+
+@media only screen and (max-width: 600px) {
+  .buttonsContainer {
+    padding: 5px 0;
+    flex-flow: wrap-reverse;
+  }
+  h2 {
+    font-size: 10px;
+    margin: 3px;
+  }
+  .btnBox button,
+  input {
+    min-width: 100px;
+    padding: 6px 12px;
+    font-size: 12px;
+    margin: 2px 2px;
+  }
+  .valuesBox,
+  .btnBox {
+    width: 50%;
+    height: auto;
+    margin: 5px auto;
+  }
+}
