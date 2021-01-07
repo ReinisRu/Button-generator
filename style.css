@@ -5,24 +5,124 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background-color: blanchedalmond;
+  background-color: #92a8d1;
 }
 
 .valuesContainer,
 .buttonsContainer {
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-evenly;
-  align-content: space-around;
+  flex-flow: row wrap;
+  align-items: flex-start;
   max-width: 768px;
+  /* height: 100px; */
   margin: auto;
+}
+
+.buttonsContainer {
+  border-top: 2px solid #034f84;
+  padding: 10px 0;
 }
 
 .valuesBox,
 .btnBox {
-  width: 25%;
+  width: 20%;
   height: 40px;
+  margin: 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+.valuesBox {
+  flex-flow: column;
+  height: 80px;
+}
+
+h2 {
+  font-size: 14px;
+  margin: 5px;
+  color: black;
+}
+
+#container {
+  max-width: 768px;
+  margin: auto;
+  text-align: center;
+}
+
+.btnBox button,
+input {
+  background-color: transparent;
+  border: none;
+  color: #black;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+input {
+  width: 80%;
+  background-color: #f7cac9;
+  border: 2px solid #034f84;
+  border-radius: 6px;
+}
+
+#createButton,
+#addButton {
+  background-color: #034f84;
+  color: white;
+  border: 2px solid #f7cac9;
+  border-radius: 6px;
+}
+#createButton:hover,
+#addButton:hover {
+  background-color: #f7cac9;
+  color: black;
+}
+
+#clearButton,
+#resetButton {
+  background-color: #f7786b;
+  color: black;
+  border: 2px solid #f7cac9;
+  border-radius: 6px;
+}
+#clearButton:hover,
+#resetButton:hover {
+  background-color: #f7cac9;
+  color: black;
+}
+
+.btn {
+  /* flex: 0 1 12%; */
+  width: 12%;
+  margin: 5px;
+  background-color: #f7cac9;
+  border: 2px solid #034f84;
+  border-radius: 6px;
+}
+
+.btn::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.btn-special {
+  background-color: #f7786b;
+}
+
+.btn-grow {
+  background-color: #034f84;
+  color: #fff;
+}
+
+.btn:hover,
+input:hover {
+  background-color: #fae0df;
+  color: black;
 }

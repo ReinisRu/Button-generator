@@ -20,7 +20,7 @@ document
   .getElementById(`createButton`)
   .addEventListener(`click`, generateButtons);
 
-let resetButton = document.getElementById(`resetButton`);
+document.getElementById(`resetButton`);
 resetButton.addEventListener(`click`, resetValues);
 
 // Declaring functions
@@ -41,10 +41,12 @@ function createButton(i) {
   element.id = i;
   element.type = `button`;
   if (i % specialValue == 0) element.classList.add(`btn-special`);
-  if (i % growValue == 0)
+  if (i % growValue == 0) {
+    element.classList.add(`btn-grow`);
     element.addEventListener(`click`, function () {
       element.textContent = Number(element.textContent) + 1;
     });
+  }
   allButtons.append(element);
 }
 
@@ -58,11 +60,10 @@ function generateButtons() {
   }
 }
 
-// Reset nestrada !?!
 function resetValues() {
-  minValue.value = 1;
-  maxValue.value = 42;
-  specialValue.value = 2;
-  growValue.value = 5;
-  console.log(`reset`);
+  console.log("reset button pressed");
+  document.getElementById(`startValue`).value = "1";
+  document.getElementById(`endValue`).value = "42";
+  document.getElementById(`specialValue`).value = "2";
+  document.getElementById(`growValue`).value = "5";
 }
